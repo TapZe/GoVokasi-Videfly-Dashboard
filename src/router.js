@@ -9,7 +9,6 @@ import Fallback from "./components/Fallback";
 // Lazy-load when importing the pages
 const Home = lazy(() => import("./pages/Home"));
 const IndonesiaNews = lazy(() => import("./pages/IndonesiaNews"));
-const SavedNews = lazy(() => import("./pages/SavedNews"));
 const SearchNews = lazy(() => import("./pages/SearchNews"));
 const Category = lazy(() => import("./pages/Category"));
 const ProgrammingNews = lazy(() => import("./pages/ProgrammingNews"));
@@ -62,14 +61,6 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Fallback />}>
             <SearchNews />
-          </Suspense>
-        ),
-      },
-      {
-        path: "/saved",
-        element: (
-          <Suspense fallback={<Fallback />}>
-            <SavedNews />
           </Suspense>
         ),
       },
