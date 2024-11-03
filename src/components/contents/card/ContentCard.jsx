@@ -1,5 +1,3 @@
-import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Card,
   CardHeader,
@@ -9,6 +7,7 @@ import {
   Button,
   CircularProgress,
 } from "@nextui-org/react";
+import elipsis from "../../../assets/elipsis-svgrepo-com.svg";
 
 const ContentCard = () => {
   return (
@@ -27,7 +26,7 @@ const ContentCard = () => {
                   className="bg-black bg-opacity-30 text-white text-large"
                   size="sm"
                 >
-                  <FontAwesomeIcon icon={faEllipsis} />
+                  <img src={elipsis} className="h-5" />
                 </Button>
               </div>
             </CardHeader>
