@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Sidebar from "../components/contents/Sidebar";
 
 const MainLayout = () => {
   return (
@@ -6,7 +7,8 @@ const MainLayout = () => {
       <div className="flex flex-grow min-h-screen">
         <div className="flex flex-row gap-x-4">
           <div>
-            <div className="sidebar">This is the side bar</div>
+            {/* <div className="sidebar">This is the side bar</div> */}
+            <Sidebar />
           </div>
           <div className="flex flex-col flex-grow">
             <div>this is the nav bar</div>
