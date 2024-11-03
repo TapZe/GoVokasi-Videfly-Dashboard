@@ -7,7 +7,7 @@ import {
   Button,
   CircularProgress,
 } from "@nextui-org/react";
-import elipsis from "../../../assets/elipsis.svg";
+import elipsisIcon from "../../../assets/elipsis.svg";
 
 const ContentCard = () => {
   return (
@@ -26,7 +26,7 @@ const ContentCard = () => {
                   className="bg-black bg-opacity-30 text-white text-large"
                   size="sm"
                 >
-                  <img src={elipsis} className="h-5" />
+                  <img src={elipsisIcon} className="h-5" />
                 </Button>
               </div>
             </CardHeader>
