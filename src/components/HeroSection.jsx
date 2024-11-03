@@ -1,8 +1,8 @@
 import { Button, Card, CardFooter, CardHeader } from "@nextui-org/react";
-import videoLogo from "../assets/video-svgrepo-com.svg";
-import linesFileLogo from "../assets/lines-file-svgrepo-com.svg";
-import speakLogo from "../assets/speak-svgrepo-com.svg";
-import userStarLogo from "../assets/user-star-svgrepo-com.svg";
+import videoIcon from "../assets/video.svg";
+import linesFileIcon from "../assets/lines-file.svg";
+import speakIcon from "../assets/speak.svg";
+import userStarIcon from "../assets/user-star.svg";
 
 const HeroSection = () => {
   return (
@@ -18,19 +18,19 @@ const HeroSection = () => {
           <CardFooter className="absolute bg-white z-10 rounded-xl bottom-0 left-1/4 w-1/2 translate-y-1/2 border-1">
             <div className="flex flex-row gap-2 items-center grow justify-around">
               <Button variant="light">
-                <img src={videoLogo} alt="..." className="h-5" />
+                <img src={videoIcon} alt="..." className="h-5" />
                 URL to Video
               </Button>
               <Button variant="light">
-                <img src={linesFileLogo} alt="..." className="h-5" />
+                <img src={linesFileIcon} alt="..." className="h-5" />
                 Text to Video
               </Button>
               <Button variant="light">
-                <img src={speakLogo} alt="..." className="h-5" />
+                <img src={speakIcon} alt="..." className="h-5" />
                 Speak to Video
               </Button>
               <Button variant="light">
-                <img src={userStarLogo} alt="..." className="h-5" />
+                <img src={userStarIcon} alt="..." className="h-5" />
                 AI Avatar
               </Button>
             </div>
