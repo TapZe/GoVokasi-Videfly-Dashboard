@@ -25,6 +25,7 @@ const ContentCard = () => {
                 <Button
                   className="bg-black bg-opacity-30 text-white text-large"
                   size="sm"
+                  isIconOnly
                 >
                   <img src={elipsisIcon} className="h-5" />
                 </Button>
@@ -54,7 +55,7 @@ const ContentCard = () => {
             <div>
               <CircularProgress
                 size="lg"
-                value={70}
+                value={65}
                 color="secondary"
                 showValueLabel={true}
               />
