@@ -7,7 +7,7 @@ import {
   Button,
   CircularProgress,
 } from "@nextui-org/react";
-import elipsis from "../../../assets/elipsis-svgrepo-com.svg";
+import elipsis from "../../../assets/elipsis.svg";
 
 const ContentCard = () => {
   return (

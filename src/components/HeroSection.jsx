@@ -1,8 +1,8 @@
 import { Button, Card, CardFooter, CardHeader } from "@nextui-org/react";
-import videoLogo from "../assets/video-svgrepo-com.svg";
-import linesFileLogo from "../assets/lines-file-svgrepo-com.svg";
-import speakLogo from "../assets/speak-svgrepo-com.svg";
-import userStarLogo from "../assets/user-star-svgrepo-com.svg";
+import videoLogo from "../assets/video.svg";
+import linesFileLogo from "../assets/lines-file.svg";
+import speakLogo from "../assets/speak.svg";
+import userStarLogo from "../assets/user-star.svg";
 
 const HeroSection = () => {
   return (
