@@ -7,6 +7,7 @@ import {
   Image,
   CardFooter,
   Button,
+  CircularProgress,
 } from "@nextui-org/react";
 
 const ContentCard = () => {
@@ -45,10 +46,21 @@ const ContentCard = () => {
             </CardFooter>
           </Card>
         </CardBody>
-        <CardFooter className="pb-0 pt-2 px-4 flex-col items-start">
-          <p className="text-tiny uppercase font-bold">Daily Mix</p>
-          <small className="text-default-500">12 Tracks</small>
-          <h4 className="font-bold text-large">Frontend Radio</h4>
+        <CardFooter className="pt-2 px-4">
+          <div className="flex flex-row justify-between flex-grow">
+            <div>
+              <p className="text-tiny capitalize font-bold">The New Cannon</p>
+              <small className="text-default-500">URL to Video</small>
+            </div>
+            <div>
+              <CircularProgress
+                size="lg"
+                value={70}
+                color="secondary"
+                showValueLabel={true}
+              />
+            </div>
+          </div>
         </CardFooter>
       </Card>
     </>
