@@ -7,7 +7,7 @@ import {
   Button,
   CircularProgress,
 } from "@nextui-org/react";
-import elipsisIcon from "../../../assets/elipsis.svg";
+import ElipsisIcon from "../../../assets/elipsis.svg";
 import formatDuration from "../../../helpers/formatDuration";
 
 const ContentCard = ({ content }) => {
@@ -34,7 +34,7 @@ const ContentCard = ({ content }) => {
                   size="sm"
                   isIconOnly
                 >
-                  <img src={elipsisIcon} className="h-5" />
+                  <ElipsisIcon />
                 </Button>
               </div>
             </CardHeader>
