@@ -6,11 +6,15 @@ import {
   DropdownMenu,
   DropdownTrigger,
 } from "@nextui-org/react";
-import bellIcon from "../assets/bell.svg";
-import { burgerBarData } from "../constants/sideBarItemsData";
-import hamburgerIcon from "../assets/hamburger-menu.svg";
+import BellIcon from "../assets/bell.svg";
+import HamburgerIcon from "../assets/hamburger-menu.svg";
+import useHamBarItem from "../hooks/useHamBarItem";
+import { useState } from "react";
 
 const NavbarSection = () => {
+  const burgerBarData = useHamBarItem();
+  const [selectedKeys, setSelectedKeys] = useState("0");
+
   return (
     <>
       <nav className="flex flex-row justify-between md:justify-end items-center py-4">
@@ -18,7 +22,7 @@ const NavbarSection = () => {
           <Dropdown>
             <DropdownTrigger>
               <Button disableRipple isIconOnly color="white">
-                <img src={hamburgerIcon} className="h-5" />
+                <HamburgerIcon />
               </Button>
             </DropdownTrigger>
             <DropdownMenu
@@ -26,6 +30,11 @@ const NavbarSection = () => {
               itemClasses={{
                 base: "gap-4",
               }}
+              disallowEmptySelection
+              selectionMode="single"
+              selectedKeys={selectedKeys}
+              onSelectionChange={setSelectedKeys}
+              hideSelectedIcon
             >
               <DropdownItem isReadOnly key="main">
                 <div className="flex justify-between">
@@ -34,18 +43,19 @@ const NavbarSection = () => {
                 </div>
               </DropdownItem>
               {burgerBarData.map((item, index) => (
-                <DropdownItem key={`${item.name}-${index}`}>
-                  <Button
-                    className="w-full justify-start"
-                    variant={index === 0 ? "flat" : "light"}
-                    color={
-                      index === burgerBarData.length - 1
-                        ? "danger"
-                        : "secondary"
-                    }
-                  >
-                    <img src={item.icon} className="h-5" /> {item.name}
-                  </Button>
+                <DropdownItem
+                  key={index}
+                  color={
+                    index === burgerBarData.length - 1 ? "danger" : "secondary"
+                  }
+                  className={
+                    index === burgerBarData.length - 1 && "text-danger"
+                  }
+                  variant="flat"
+                >
+                  <div className="flex gap-2 py-2">
+                    {item.icon} {item.name}
+                  </div>
                 </DropdownItem>
               ))}
             </DropdownMenu>
@@ -62,7 +72,7 @@ const NavbarSection = () => {
             </Button>
             <Badge content="5" color="danger">
               <Button variant="light" color="secondary" isIconOnly>
-                <img src={bellIcon} className="h-10" />
+                <BellIcon />
               </Button>
             </Badge>
           </div>
