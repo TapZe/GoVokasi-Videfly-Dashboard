@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
-import NavbarSection from "../components/Navbar";
+import NavbarSection from "../components/NavbarSection";
 import HeroSection from "../components/HeroSection";
 import AIBot from "../components/AIBot";
 
