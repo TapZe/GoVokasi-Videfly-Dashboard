@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/react";
 
 const Sidebar = () => {
   return (
-    <div className="sticky left-0 top-0 w-[260px] h-screen flex flex-col gap-16 px-4 py-6 border-r-2 border-[#ECECEC] items-center">
+    <div className="sticky left-0 top-0 w-[200px] lg:w-[260px] h-screen hidden md:flex flex-col gap-16 px-4 py-6 border-r-2 border-[#ECECEC] items-center">
       <img src={logo} alt="videfly-logo" />
 
       <Button className="w-full flex gap-3 rounded-xl bg-[#703BE7] text-white justify-center ">
