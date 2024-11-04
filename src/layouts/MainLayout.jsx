@@ -1,20 +1,23 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "../components/contents/Sidebar";
+import Sidebar from "../components/Sidebar";
+import NavbarSection from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
+import AIBot from "../components/AIBot";
 
 const MainLayout = () => {
   return (
     <>
-      <div className="flex flex-grow min-h-screen">
-        <div className="flex flex-row gap-x-4">
+      <div className="min-h-screen">
+        <div className="flex flex-row">
           <div>
-            {/* <div className="sidebar">This is the side bar</div> */}
             <Sidebar />
           </div>
-          <div className="flex flex-col flex-grow">
-            <div>this is the nav bar</div>
-            <div>this is the hero</div>
+          <div className="flex flex-col flex-grow container px-6">
+            <NavbarSection />
+            <HeroSection />
             <Outlet />
           </div>
+          <AIBot />
         </div>
       </div>
     </>
