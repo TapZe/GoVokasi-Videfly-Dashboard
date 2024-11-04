@@ -1,8 +1,8 @@
 import { Button, Card, CardFooter, CardHeader } from "@nextui-org/react";
-import videoIcon from "../assets/video.svg";
-import linesFileIcon from "../assets/lines-file.svg";
-import speakIcon from "../assets/speak.svg";
-import userStarIcon from "../assets/user-star.svg";
+import VideoIcon from "../assets/video.svg";
+import LinesFileIcon from "../assets/lines-file.svg";
+import SpeakIcon from "../assets/speak.svg";
+import UserStarIcon from "../assets/user-star.svg";
 
 const HeroSection = () => {
   return (
@@ -16,21 +16,21 @@ const HeroSection = () => {
           </CardHeader>
           <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary z-0 rounded-xl" />
           <CardFooter className="absolute bg-white z-10 rounded-xl bottom-0 translate-y-1/2 border-1 xl:left-[20%] xl:w-[60%] lg:left-[12.5%] lg:w-[75%]">
-            <div className="flex flex-row gap-2 items-center grow justify-around">
-              <Button variant="light">
-                <img src={videoIcon} alt="..." className="h-5" />
+            <div className="flex flex-row items-center grow justify-around">
+              <Button variant="light" className="px-1">
+                <VideoIcon />
                 URL to Video
               </Button>
-              <Button variant="light">
-                <img src={linesFileIcon} alt="..." className="h-5" />
+              <Button variant="light" className="px-1">
+                <LinesFileIcon />
                 Text to Video
               </Button>
-              <Button variant="light">
-                <img src={speakIcon} alt="..." className="h-5" />
+              <Button variant="light" className="px-1">
+                <SpeakIcon />
                 Speak to Video
               </Button>
-              <Button variant="light">
-                <img src={userStarIcon} alt="..." className="h-5" />
+              <Button variant="light" className="px-1">
+                <UserStarIcon />
                 AI Avatar
               </Button>
             </div>

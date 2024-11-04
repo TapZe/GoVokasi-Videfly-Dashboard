@@ -1,5 +1,5 @@
 import logo from "../assets/sidebar/videfly-logo.png";
-import addCircle from "../assets/sidebar/add-circle-half-dot.svg";
+import AddCircle from "../assets/sidebar/add-circle-half-dot.svg";
 import { Button } from "@nextui-org/react";
 
 const Sidebar = () => {
@@ -9,7 +9,7 @@ const Sidebar = () => {
 
       <Button className="w-full flex gap-3 rounded-xl bg-[#703BE7] text-white justify-center ">
         <div className="font-semibold">Buat Video</div>
-        <img src={addCircle} alt="add-circle" />
+        <AddCircle />
       </Button>
 
       <div className="flex flex-col gap-1 w-full ">
