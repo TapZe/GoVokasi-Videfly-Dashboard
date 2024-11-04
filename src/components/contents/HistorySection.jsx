@@ -53,13 +53,13 @@ const HistorySection = ({ contents }) => {
         </button>
       </div>
       {isListed ? (
-        <div className="flex flex-col max-h-[400px] overflow-y-auto">
+        <div className="flex flex-col max-h-[calc(100vh-7rem)] overflow-y-auto">
           {sortedContents.map((content) => {
             return <RowCard key={content.id} content={content} />;
           })}
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-h-[400px] overflow-y-auto rounded-xl pb-2">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-h-[calc(100vh-7rem)] overflow-y-auto rounded-xl pb-2 h-">
           {sortedContents.map((content) => {
             return <ContentCard key={content.id} content={content} />;
           })}
