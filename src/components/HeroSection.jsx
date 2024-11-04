@@ -15,7 +15,7 @@ const HeroSection = () => {
             </h4>
           </CardHeader>
           <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary z-0 rounded-xl" />
-          <CardFooter className="absolute bg-white z-10 rounded-xl bottom-0 left-1/4 w-1/2 translate-y-1/2 border-1">
+          <CardFooter className="absolute bg-white z-10 rounded-xl bottom-0 translate-y-1/2 border-1 xl:left-[20%] xl:w-[60%] lg:left-[12.5%] lg:w-[75%]">
             <div className="flex flex-row gap-2 items-center grow justify-around">
               <Button variant="light">
                 <img src={videoIcon} alt="..." className="h-5" />

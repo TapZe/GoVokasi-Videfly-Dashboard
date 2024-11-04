@@ -59,7 +59,7 @@ const HistorySection = ({ contents }) => {
           })}
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-h-[calc(100vh-7rem)] overflow-y-auto rounded-xl pb-2 h-">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-h-[calc(100vh-7rem)] overflow-y-auto rounded-xl pb-2">
           {sortedContents.map((content) => {
             return <ContentCard key={content.id} content={content} />;
           })}
