@@ -1,5 +1,5 @@
-import logo from "../../assets/sidebar/videfly-logo.png";
-import addCircle from "../../assets/sidebar/add-circle-half-dot.svg";
+import logo from "../assets/sidebar/videfly-logo.png";
+import addCircle from "../assets/sidebar/add-circle-half-dot.svg";
 import { Button } from "@nextui-org/react";
 
 const Sidebar = () => {
