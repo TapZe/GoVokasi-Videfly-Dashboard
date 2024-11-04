@@ -8,8 +8,9 @@ import {
   CircularProgress,
 } from "@nextui-org/react";
 import elipsisIcon from "../../../assets/elipsis.svg";
+import formatDuration from "../../../helpers/formatDuration";
 
-const ContentCard = () => {
+const ContentCard = ({ content }) => {
   return (
     <>
       <Card className="p-0">
@@ -18,8 +19,14 @@ const ContentCard = () => {
             <CardHeader className="absolute z-10 top-0">
               <div className="flex justify-between grow">
                 <div className="flex items-center">
-                  <p className="text-tiny font-bold text-danger bg-danger-200 rounded-xl px-2">
-                    Drafted
+                  <p
+                    className={`text-tiny font-bold ${
+                      content.success
+                        ? "text-primary bg-primary-200"
+                        : "text-danger bg-danger-200"
+                    } rounded-xl px-2`}
+                  >
+                    {content.success ? "Complete" : "Drafted"}
                   </p>
                 </div>
                 <Button
@@ -33,14 +40,14 @@ const ContentCard = () => {
             </CardHeader>
             <Image
               removeWrapper
-              alt="Card example background"
-              className="z-0 w-64 h-44 object-cover"
-              src="https://nextui.org/images/card-example-6.jpeg"
+              alt={content.title}
+              className="z-0 h-44 object-cover"
+              src={content.image}
             />
             <CardFooter className="absolute bottom-0 z-10">
               <div className="flex flex-row-reverse flex-grow">
                 <p className="text-tiny text-white bg-black bg-opacity-35 rounded-xl px-2">
-                  00:30
+                  {formatDuration(content.duration)}
                 </p>
               </div>
             </CardFooter>
@@ -49,13 +56,13 @@ const ContentCard = () => {
         <CardFooter className="pt-2 px-4">
           <div className="flex flex-row justify-between flex-grow">
             <div>
-              <p className="text-tiny capitalize font-bold">The New Cannon</p>
-              <small className="text-default-500">URL to Video</small>
+              <p className="text-tiny capitalize font-bold">{content.title}</p>
+              <small className="text-default-500">{content.typeDesc}</small>
             </div>
             <div>
               <CircularProgress
                 size="lg"
-                value={65}
+                value={content.progress}
                 color="secondary"
                 showValueLabel={true}
               />
