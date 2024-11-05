@@ -12,10 +12,14 @@ const MainLayout = () => {
           <div className="flex-grow-0">
             <Sidebar />
           </div>
-          <div className="flex flex-col flex-grow container mx-auto px-6">
-            <NavbarSection />
-            <HeroSection />
-            <Outlet />
+          <div className="flex flex-col flex-grow sm:container sm:mx-auto sm:px-6">
+            <div className="flex flex-col sm:from-white bg-gradient-to-b from-violet-300 via-violet-200 to-white px-3">
+              <NavbarSection />
+              <HeroSection />
+            </div>
+            <div className="px-6 sm:px-0">
+              <Outlet />
+            </div>
           </div>
           <AIBot />
         </div>
