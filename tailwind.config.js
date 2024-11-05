@@ -9,7 +9,11 @@ export default {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: "430px",
+      },
+    },
   },
   darkMode: "class",
   plugins: [nextui()],
