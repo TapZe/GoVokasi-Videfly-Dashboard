@@ -12,7 +12,7 @@ const MainLayout = () => {
           <div className="flex-grow-0">
             <Sidebar />
           </div>
-          <div className="flex flex-col flex-grow container mx-auto px-6">
+          <div className="flex flex-col flex-grow sm:container sm:mx-auto px-6">
             <NavbarSection />
             <HeroSection />
             <Outlet />

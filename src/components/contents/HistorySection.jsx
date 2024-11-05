@@ -14,7 +14,7 @@ const HistorySection = ({ contents }) => {
   });
 
   return (
-    <div className="container mx-auto my-12">
+    <div className="my-12">
       <div className="flex justify-between mb-4">
         <h2 className="text-base font-bold">History</h2>
         <button
@@ -59,7 +59,7 @@ const HistorySection = ({ contents }) => {
           })}
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-h-[calc(100vh-7rem)] overflow-y-auto rounded-xl pb-2">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-8 max-h-[calc(100vh-7rem)] overflow-y-auto rounded-xl pb-2">
           {sortedContents.map((content) => {
             return <ContentCard key={content.id} content={content} />;
           })}
