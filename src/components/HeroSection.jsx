@@ -10,11 +10,11 @@ const HeroSection = () => {
       <div className="flex flex-col mx-6 gap-6">
         <Card className="w-full h-40 col-span-12 sm:col-span-7 overflow-visible">
           <CardHeader className="absolute z-10 flex flex-grow bottom-0 top-0 items-center justify-center flex-col">
-            <h4 className="text-white font-medium text-large xs:text-xl md:text-2xl capitalize text-center">
+            <h4 className="text-white font-medium text-large xs:text-xl md:text-2xl capitalize text-center md:-translate-y-1/2">
               Mulai kreasi baru kamu hari ini!
             </h4>
           </CardHeader>
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary z-0 rounded-xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-violet-700 to-blue-600 z-0 rounded-xl" />
           <CardFooter className="absolute bg-white z-10 rounded-xl bottom-0 translate-y-1/2 border-1 xl:left-[20%] xl:w-[60%] lg:left-[12.5%] lg:w-[75%] hidden sm:block">
             <div className="flex flex-row items-center grow justify-around">
               <Button variant="light" className="px-1">
