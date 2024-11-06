@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar";
 import NavbarSection from "../components/NavbarSection";
 import HeroSection from "../components/HeroSection";
 import AIBot from "../components/AIBot";
+import BottomBarSection from "../components/BottomBarSection";
 
 const MainLayout = () => {
   return (
@@ -21,6 +22,7 @@ const MainLayout = () => {
               <Outlet />
             </div>
           </div>
+          <BottomBarSection />
           <AIBot />
         </div>
       </div>
