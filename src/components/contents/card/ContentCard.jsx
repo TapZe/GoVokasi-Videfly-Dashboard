@@ -9,6 +9,7 @@ import {
 } from "@nextui-org/react";
 import ElipsisIcon from "../../../assets/elipsis.svg";
 import formatDuration from "../../../helpers/formatDuration";
+import PinBtn from "./button/PinBtn";
 
 const ContentCard = ({ content }) => {
   return (
@@ -29,13 +30,16 @@ const ContentCard = ({ content }) => {
                     {content.success ? "Complete" : "Drafted"}
                   </p>
                 </div>
-                <Button
-                  className="bg-black bg-opacity-30 text-white text-large"
-                  size="sm"
-                  isIconOnly
-                >
-                  <ElipsisIcon />
-                </Button>
+                <div className="flex flex-row gap-1">
+                  <PinBtn id={content.id} pinned={content.pinned} />
+                  <Button
+                    className="bg-black bg-opacity-30 text-white"
+                    size="sm"
+                    isIconOnly
+                  >
+                    <ElipsisIcon />
+                  </Button>
+                </div>
               </div>
             </CardHeader>
             <Image

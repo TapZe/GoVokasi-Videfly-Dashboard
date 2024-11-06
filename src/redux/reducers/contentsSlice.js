@@ -6,8 +6,16 @@ const initialState = contentCardData;
 const contentSlice = createSlice({
   name: "contentSlice",
   initialState,
-  reducers: {},
+  reducers: {
+    changePinned: (state, action) => {
+      const { id } = action.payload;
+      const contentCard = state.find((card) => card.id === id);
+      if (contentCard) {
+        contentCard.pinned = !contentCard.pinned;
+      }
+    },
+  },
 });
 
-// export const {} = contentSlice.actions;
+export const { changePinned } = contentSlice.actions;
 export default contentSlice.reducer;
