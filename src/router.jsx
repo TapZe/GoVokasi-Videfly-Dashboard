@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 // Layout and 404 import
-// import Error404 from "./pages/Error404";
+import Error404 from "./pages/Error404";
 import Fallback from "./components/Fallback";
 import MainLayout from "./layouts/MainLayout";
 
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         <MainLayout />
       </Suspense>
     ),
-    // errorElement: <Error404 />,
+    errorElement: <Error404 />,
     children: [
       {
         path: "",
