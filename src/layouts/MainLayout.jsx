@@ -17,7 +17,7 @@ const MainLayout = () => {
               <NavbarSection />
               <HeroSection />
             </div>
-            <div className="px-6 sm:px-0">
+            <div className="px-6 sm:px-0 my-12">
               <Outlet />
             </div>
           </div>
