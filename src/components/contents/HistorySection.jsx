@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ContentCard from "./card/ContentCard";
 import RowCard from "./card/RowCard";
 import ListIcon from "../../assets/list.svg";
 import FourBoxIcon from "../../assets/four-box.svg";
 import { Button } from "@nextui-org/react";
-import Fallback from "../Fallback";
 
 const HistorySection = ({ contents }) => {
   const [isListed, setIsListed] = useState(false);
@@ -19,15 +18,33 @@ const HistorySection = ({ contents }) => {
     // Pinned items should come first
     return a.pinned ? -1 : 1;
   };
-
   const sortedContents = Array.from(contents || []).sort(sortContents);
+
+  useEffect(() => {
+    // Function to check the viewport size
+    const checkViewportSize = () => {
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        setIsListed(false);
+      }
+    };
+
+    // Check on initial render
+    checkViewportSize();
+
+    // Add event listener at the window for resize
+    window.addEventListener("resize", checkViewportSize);
+    // Clean it up after unmount
+    return () => {
+      window.removeEventListener("resize", checkViewportSize);
+    };
+  }, []);
 
   return (
     <>
       <div className="flex justify-between mb-4">
         <h2 className="text-base font-bold">History</h2>
         <Button
-          className="bg-white border-2 hover:bg-[#F1EBFD] hover:text-[#8D62EC] transition-all duration-300"
+          className="bg-white border-2 hover:bg-[#F1EBFD] hover:text-[#8D62EC] transition-all duration-300 hidden md:flex"
           isIconOnly
           onClick={() => setIsListed(!isListed)}
         >

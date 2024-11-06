@@ -4,7 +4,7 @@ const Fallback = () => {
   return (
     <>
       <div className="flex items-center justify-center">
-        <Spinner color="primary" label="Loading...." labelColor="primary" />
+        <Spinner color="secondary" label="Loading...." labelColor="secondary" />
       </div>
     </>
   );
