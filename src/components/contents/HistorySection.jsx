@@ -4,6 +4,7 @@ import RowCard from "./card/RowCard";
 import ListIcon from "../../assets/list.svg";
 import FourBoxIcon from "../../assets/four-box.svg";
 import { Button } from "@nextui-org/react";
+import Fallback from "../Fallback";
 
 const HistorySection = ({ contents }) => {
   const [isListed, setIsListed] = useState(false);
@@ -22,7 +23,7 @@ const HistorySection = ({ contents }) => {
   const sortedContents = Array.from(contents || []).sort(sortContents);
 
   return (
-    <div className="my-12">
+    <>
       <div className="flex justify-between mb-4">
         <h2 className="text-base font-bold">History</h2>
         <Button
@@ -46,7 +47,7 @@ const HistorySection = ({ contents }) => {
           })}
         </div>
       )}
-    </div>
+    </>
   );
 };
 
