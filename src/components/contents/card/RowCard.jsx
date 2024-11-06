@@ -1,5 +1,5 @@
 import formatHistory from "../../../helpers/formatHistory";
-import PinBtn from "./button/pinBtn";
+import PinBtn from "./button/PinBtn";
 
 const RowCard = ({ content }) => {
   return (

@@ -9,7 +9,7 @@ import {
 } from "@nextui-org/react";
 import ElipsisIcon from "../../../assets/elipsis.svg";
 import formatDuration from "../../../helpers/formatDuration";
-import PinBtn from "./button/pinBtn";
+import PinBtn from "./button/PinBtn";
 
 const ContentCard = ({ content }) => {
   return (
