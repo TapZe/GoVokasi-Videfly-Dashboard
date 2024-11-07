@@ -9,13 +9,20 @@ import BrandKitIcon from "../assets/brand-kit.svg";
 import SettingIcon from "../assets/setting.svg";
 import LogoutIcon from "../assets/logout.svg";
 import { Button } from "@nextui-org/react";
+import { useDispatch } from "react-redux";
+import { addRandomVideo } from "../redux/reducers/contentsSlice";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="sticky left-0 top-0 w-[200px] lg:w-[260px] h-screen hidden md:flex flex-col gap-16 px-4 py-6 border-r-2 border-[#ECECEC] items-center">
       <img src={logo} alt="videfly-logo" />
 
-      <Button className="w-full flex gap-3 py-5 rounded-xl bg-[#703BE7] text-white justify-center ">
+      <Button
+        className="w-full flex gap-3 py-5 rounded-xl bg-[#703BE7] text-white justify-center"
+        onClick={() => dispatch(addRandomVideo())}
+      >
         <div className="font-semibold">Buat Video</div>
         <AddCircleIcon />
       </Button>

@@ -3,8 +3,16 @@ import VideoIcon from "../assets/video.svg";
 import LinesFileIcon from "../assets/lines-file.svg";
 import SpeakIcon from "../assets/speak.svg";
 import UserStarIcon from "../assets/user-star.svg";
+import {
+  addAIAvatar,
+  addSpeechToVideo,
+  addTextToVideo,
+  addURLToVideo,
+} from "../redux/reducers/contentsSlice";
+import { useDispatch } from "react-redux";
 
 const HeroSection = () => {
+  const dispatch = useDispatch();
   return (
     <>
       <div className="flex flex-col mx-6 gap-6">
@@ -15,34 +23,51 @@ const HeroSection = () => {
             </h4>
           </CardHeader>
           <div className="absolute inset-0 bg-gradient-to-r from-violet-700 to-blue-600 z-0 rounded-xl" />
-          <CardFooter className="absolute bg-white z-10 rounded-xl bottom-0 translate-y-1/2 border-1 xl:left-[20%] xl:w-[60%] lg:left-[12.5%] lg:w-[75%] hidden sm:block">
+          <CardFooter className="absolute bg-white z-10 rounded-xl bottom-0 translate-y-1/2 border-1 xl:left-[20%] xl:w-[60%] lg:left-[12.5%] lg:w-[75%] hidden md:block">
             <div className="flex flex-row items-center grow justify-around">
-              <Button variant="light" className="px-1">
+              <Button
+                variant="light"
+                className="px-1"
+                onClick={() => dispatch(addURLToVideo())}
+              >
                 <VideoIcon />
                 URL to Video
               </Button>
-              <Button variant="light" className="px-1">
+              <Button
+                variant="light"
+                className="px-1"
+                onClick={() => dispatch(addTextToVideo())}
+              >
                 <LinesFileIcon />
                 Text to Video
               </Button>
-              <Button variant="light" className="px-1">
+              <Button
+                variant="light"
+                className="px-1"
+                onClick={() => dispatch(addSpeechToVideo())}
+              >
                 <SpeakIcon />
-                Speak to Video
+                Speech to Video
               </Button>
-              <Button variant="light" className="px-1">
+              <Button
+                variant="light"
+                className="px-1"
+                onClick={() => dispatch(addAIAvatar())}
+              >
                 <UserStarIcon />
                 AI Avatar
               </Button>
             </div>
           </CardFooter>
         </Card>
-        <div className="flex flex-row items-center grow justify-between sm:hidden">
+        <div className="flex flex-row items-center grow justify-between md:hidden">
           <div className="flex flex-col gap-1 justify-center items-center">
             <Button
               isIconOnly
               radius="full"
               size="lg"
               className="bg-violet-500 text-white"
+              onClick={() => dispatch(addURLToVideo())}
             >
               <VideoIcon />
             </Button>
@@ -54,6 +79,7 @@ const HeroSection = () => {
               radius="full"
               size="lg"
               className="text-white bg-gray-500"
+              onClick={() => dispatch(addTextToVideo())}
             >
               <LinesFileIcon />
             </Button>
@@ -65,6 +91,7 @@ const HeroSection = () => {
               radius="full"
               size="lg"
               className="bg-orange-500 text-white"
+              onClick={() => dispatch(addSpeechToVideo())}
             >
               <SpeakIcon />
             </Button>
@@ -76,6 +103,7 @@ const HeroSection = () => {
               radius="full"
               size="lg"
               className="bg-green-600 text-white"
+              onClick={() => dispatch(addAIAvatar())}
             >
               <UserStarIcon />
             </Button>

@@ -4,8 +4,12 @@ import AddCircleIcon from "../assets/add-circle-half-dot.svg";
 import PencilIcon from "../assets/pencil.svg";
 import BrandKitIcon from "../assets/brand-kit.svg";
 import { Button } from "@nextui-org/react";
+import { useDispatch } from "react-redux";
+import { addRandomVideo } from "../redux/reducers/contentsSlice";
 
 const BottomBarSection = () => {
+  const dispatch = useDispatch();
+
   return (
     <div
       className="md:hidden fixed bottom-0 z-20 grid grid-cols-5 w-full p-2 bg-white"
@@ -29,6 +33,7 @@ const BottomBarSection = () => {
       <Button
         isIconOnly
         className="flex items-center justify-center bg-[#703BE7] rounded-full mx-auto absolute -translate-y-1/2 left-1/2 transform -translate-x-1/2 w-16 h-16"
+        onClick={() => dispatch(addRandomVideo())}
       >
         <AddCircleIcon className="w-10 h-10" />
       </Button>
