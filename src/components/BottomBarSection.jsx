@@ -28,7 +28,7 @@ const BottomBarSection = () => {
         <p className="text-xs">Kelola Konten</p>
       </button>
 
-      <button></button>
+      <div></div>
 
       <Button
         isIconOnly
