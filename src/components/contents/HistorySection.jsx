@@ -41,7 +41,7 @@ const HistorySection = ({ contents }) => {
 
   return (
     <>
-      <div className="flex justify-between mb-4">
+      <div className="flex justify-between mb-2">
         <h2 className="text-base font-bold">History</h2>
         <Button
           className="bg-white border-2 hover:bg-[#F1EBFD] hover:text-[#8D62EC] transition-all duration-300 hidden md:flex"
@@ -58,7 +58,7 @@ const HistorySection = ({ contents }) => {
           })}
         </div>
       ) : (
-        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-8 max-h-[calc(100vh-7rem)] overflow-y-auto rounded-xl pb-2">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-8 max-h-[calc(100vh-7rem)] overflow-y-auto rounded-xl p-1">
           {sortedContents?.map((content) => {
             return <ContentCard key={content.id} content={content} />;
           })}
