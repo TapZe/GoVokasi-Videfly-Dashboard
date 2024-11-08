@@ -14,7 +14,7 @@ import PinBtn from "./button/PinBtn";
 const ContentCard = ({ content }) => {
   return (
     <>
-      <Card className="p-0">
+      <Card className="p-0 hover:cursor-pointer hover:scale-[1.025] transition-transform duration-300">
         <CardBody className="overflow-visible p-0 pb-2">
           <Card radius="lg" className="border-none">
             <CardHeader className="absolute z-10 top-0">
